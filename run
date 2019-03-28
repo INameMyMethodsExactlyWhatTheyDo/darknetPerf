@@ -1,0 +1,8 @@
+#!/bin/sh
+
+echo "SCRIPT - lets begin the training!"
+start_time=`date +%s`
+cd dn/darknet
+./darknet detector train cfg/voc.data cfg/yolov3-voc.cfg darknet53.conv.74
+echo "----------- Run time is $(expr `date +%s` - $start_time)s ------------------"
+echo "----------- Run time is $(expr `date +%s` - $start_time)s ------------------" > ../../execTime
